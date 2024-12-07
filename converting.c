@@ -30,7 +30,7 @@ void converting(void) {
 			doubleNumber = atoi(doubleString); // Convert string to double
 			printf("Converted number is %d\n", doubleNumber);
 		}
-	} while (strcmp(intString, "q") != 0);
+	} while (strcmp(doubleString, "q") != 0);
 	printf("*** End of Converting Strings to double Demo ***\n\n");
 } 
 

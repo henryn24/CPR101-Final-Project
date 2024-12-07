@@ -29,10 +29,10 @@ void tokenizing(void) {
 	char* nextPhrase = NULL;
 	int phrasesCounter;
 	do {
-		printf("Type a few phraes separated by comma(q - to quit):\n");
+		printf("Type a few phrases separated by comma(q - to quit):\n");
 		fgets(phrases, BUFFER_SIZE, stdin); //Get user input
 		phrases[strlen(phrases) - 1] = '\0'; // Remove newline 
-		if (strcmp(phrases, "q" != 0)) {
+		if (strcmp(phrases, "q") != 0) {
 			nextPhrase = strtok(phrases, ","); // Tokenize the input by commas
 			phrasesCounter = 1;
 			while (nextPhrase) { // Process each token

@@ -30,7 +30,7 @@ void manipulating(void) {
 		printf("Type the 1st string to compare (q - to quit):\n");
 		fgets(compare1, BUFFER_SIZE, stdin); // Read the first string
 		compare1[strlen(compare1) - 1] = '\0'; // Remove newline
-		if (strcmp(compare1, 'q') != 0) {
+		if (strcmp(compare1, "q") != 0) {
 			printf("Type the 2nd string to compare:\n");
 			fgets(compare2, BUFFER_SIZE, stdin); // Read the second string
 			compare2[strlen(compare2) - 1] = '\0'; // Remove newline
