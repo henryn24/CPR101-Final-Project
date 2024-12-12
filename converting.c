@@ -36,13 +36,13 @@ void converting(void) {
 // V3
 	printf("*** Start of Converting Strings to long Demo ***\n");
 	char longString[BUFFER_SIZE];
-	long longNumber;
+	long longNumber; // Converted long
 	do {
 		printf("Type the long numeric string (q - to quit):\n");
-		fgets(longString, BUFFER_SIZE, stdin);
-		longString[strlen(longString) - 1] = '\0';
+		fgets(longString, BUFFER_SIZE, stdin); // Get long string
+		longString[strlen(longString) - 1] = '\0'; // Remove newline
 		if (strcmp(longString, "q") != 0) {
-			longNumber = atol(longString);
+			longNumber = atol(longString); // Convert string to long 
 			printf("Converted number is %ld\n", longNumber);
 		}
 	} while (strcmp(longString, "q") != 0);

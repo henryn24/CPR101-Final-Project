@@ -44,13 +44,13 @@ void fundamentals(void) {
 	char destination[BUFFER_SIZE];
 	char source[BUFFER_SIZE];
 	do {
-		destination[0] = '\0';
-		printf("Destination string is reset to empty\n");
+		destination[0] = '\0'; // Reset destination to empty
+		printf("Destination string is reset to empty\n");  
 		printf("Type the source string (q - to quit):\n");
-		fgets(source, BUFFER_SIZE, stdin);
-		source[strlen(source) - 1] = '\0';
+		fgets(source, BUFFER_SIZE, stdin); // Read source string
+		source[strlen(source) - 1] = '\0'; // Remove newline
 		if (strcmp(source, "q") != 0) {
-			strcpy(destination, source);
+			strcpy(destination, source);  // Copy source to destination 
 			printf("New destination string is '%s'\n", destination);
 		}
 	} while (strcmp(source, "q") != 0);
