@@ -42,4 +42,24 @@ void tokenizing(void) {
 		}
 	} while (strcmp(phrases, "q") != 0);
 	printf("*** End of Tokenizing Phrases Demo ***\n\n");
+
+// V3
+	printf("*** Start of Tokenizing Sentences Demo ***\n");
+	char sentences[BUFFER_SIZE];
+	char* nextSentence = NULL; // Pointer to current sentence token
+	int sentencesCounter; // Counter to track number of sentences
+	do {
+		printf("Type a few sentences separated by dot(q - to quit):\n");
+		fgets(sentences, BUFFER_SIZE, stdin); // Get string input
+		sentences[strlen(sentences) - 1] = '\0'; // Remove newline
+		if (strcmp(sentences, "q") != 0) {
+			nextSentence = strtok(sentences, "."); // Tokenizing input with '.' delimiter
+			sentencesCounter = 1; // Initialize counter
+			while (nextSentence) {
+				printf("Sentence #%d is \'%s\'\n", sentencesCounter++, nextSentence);
+				nextSentence = strtok(NULL, "."); // Get the next token
+			}
+		}
+	} while (strcmp(sentences, "q") != 0);
+	printf("*** End of Tokenizing Sentences Demo");
 }
