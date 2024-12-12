@@ -38,4 +38,21 @@ void fundamentals(void) {
 			printf("The length of \'%s\' is %d characters\n", buffer2, (int)strlen(buffer2));
 	} while (strcmp(buffer2, "q") != 0);
 	printf("*** End of Measuring Strings Demo ***\n\n");
+
+// V3
+	printf(" Start of Copying Strings Demo \n");
+	char destination[BUFFER_SIZE];
+	char source[BUFFER_SIZE];
+	do {
+		destination[0] = '\0';
+		printf("Destination string is reset to empty\n");
+		printf("Type the source string (q - to quit):\n");
+		fgets(source, BUFFER_SIZE, stdin);
+		source[strlen(source) - 1] = '\0';
+		if (strcmp(source, "q") != 0) {
+			strcpy(destination, source);
+			printf("New destination string is '%s'\n", destination);
+		}
+	} while (strcmp(source, "q") != 0);
+	printf("*** End of Copying Strings Demo");
 }
